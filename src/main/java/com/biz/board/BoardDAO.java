@@ -16,14 +16,17 @@ public class BoardDAO {
 
     public void insertBoard(BoardVO vo){
         mybatis.insert("BoardMapper.insertBoard", vo);
+        mybatis.commit();
     }
 
     public void updateBoard(BoardVO vo){
         mybatis.update("BoardMapper.updateBoard", vo);
+        mybatis.commit();
     }
 
     public void deleteBoard(BoardVO vo){
         mybatis.delete("BoardMapper.deleteBoard", vo);
+        mybatis.commit();
     }
 
     public BoardVO getBoard(BoardVO vo) {

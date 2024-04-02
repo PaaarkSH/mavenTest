@@ -4,7 +4,7 @@
 <mapper namespace="BoardMapper">
     <insert id="insertBoard" parameterType="com.biz.board.BoardVO">
         insert into board(seq, title, writer, content)
-        values (#{seq}, #{title}, #{writer}, #{content} )
+        values ( (select nvm(max(seq), 0) + 1 from board), #{title}, #{writer}, #{content} )
     </insert>
 
     <update id="updateBoard" parameterType="com.biz.board.BoardVO">
