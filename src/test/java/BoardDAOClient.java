@@ -14,9 +14,12 @@ public class BoardDAOClient {
         vo.setContent("내용");
         dao.insertBoard(vo);
 
-        List<BoardVO> boardList = dao.getBoardList();
-        for (BoardVO board: boardList){
-            System.out.println("-->" + board.toString());
-        }
+//        List<BoardVO> boardList = dao.getBoardList();
+//        for (BoardVO board: boardList){
+//            System.out.println("-->" + board.toString());
+//        }
+        vo.setSeq(1);
+        BoardVO board = dao.getBoard(vo);
+        System.out.println("결과보기 : " + board.toString());
     }
 }

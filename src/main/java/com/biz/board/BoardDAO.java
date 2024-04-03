@@ -30,7 +30,7 @@ public class BoardDAO {
     }
 
     public BoardVO getBoard(BoardVO vo) {
-        return mybatis.selectOne("BoardMapper.getBoard");
+        return mybatis.selectOne("BoardMapper.getBoard", vo);
     }
 
     public List<BoardVO> getBoardList() {
