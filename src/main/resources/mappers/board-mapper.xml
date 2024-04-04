@@ -33,16 +33,16 @@
         ]]>
     </select>
 
-    <select id="getBoardList_T"  resultType="boardResult">
+    <select id="getBoardList"  resultType="boardResult">
         select seq, title, writer, content, regdate, cnt
         from board
-        where title like '%'||#{searchKeyword}||'%'
-        order by seq
-    </select>
-    <select id="getBoardList_C"  resultType="boardResult">
-        select seq, title, writer, content, regdate, cnt
-        from board
-        where content like '%'||#{searchKeyword}||'%'
+        where 1=1
+        <if test="searchCondition == 'TITLE'">
+            and title like '%'||#{searchKeyword}||'%'
+        </if>
+        <if test="searchCondition == 'CONTENT'">
+            and content like '%'||#{searchKeyword}||'%'
+        </if>
         order by seq
     </select>
 </mapper>
