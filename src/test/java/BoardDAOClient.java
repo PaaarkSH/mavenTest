@@ -3,7 +3,8 @@ import com.biz.board.BoardVO;
 
 import java.util.List;
 
-public class BoardDAOClient {
+public class
+BoardDAOClient {
     public static void main(String[] args) {
         BoardDAO dao = new BoardDAO();
 
@@ -14,12 +15,16 @@ public class BoardDAOClient {
         vo.setContent("내용");
         dao.insertBoard(vo);
 
-//        List<BoardVO> boardList = dao.getBoardList();
-//        for (BoardVO board: boardList){
-//            System.out.println("-->" + board.toString());
-//        }
-        vo.setSeq(1);
-        BoardVO board = dao.getBoard(vo);
-        System.out.println("결과보기 : " + board.toString());
+        vo.setSearchCondition("TITLE");
+        vo.setSearchKeyword("가입");
+
+        List<BoardVO> boardList = dao.getBoardList(vo);
+        for (BoardVO board: boardList){
+            System.out.println("-->" + board.toString());
+        }
+
+//        vo.setSeq(1);
+//        BoardVO board = dao.getBoard(vo);
+//        System.out.println("결과보기 : " + board.toString());
     }
 }

@@ -14,17 +14,17 @@ public class BoardDAO {
         this.mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
     }
 
-    public void insertBoard(BoardVO vo){
+    public void insertBoard(BoardVO vo) {
         mybatis.insert("BoardMapper.insertBoard", vo);
         mybatis.commit();
     }
 
-    public void updateBoard(BoardVO vo){
+    public void updateBoard(BoardVO vo) {
         mybatis.update("BoardMapper.updateBoard", vo);
         mybatis.commit();
     }
 
-    public void deleteBoard(BoardVO vo){
+    public void deleteBoard(BoardVO vo) {
         mybatis.delete("BoardMapper.deleteBoard", vo);
         mybatis.commit();
     }
@@ -33,7 +33,13 @@ public class BoardDAO {
         return mybatis.selectOne("BoardMapper.getBoard", vo);
     }
 
-    public List<BoardVO> getBoardList() {
-        return mybatis.selectList("BoardMapper.getBoardList");
+    public List<BoardVO> getBoardList(BoardVO vo) {
+        if (vo.getSearchCondition().equals("TITLE")) {
+            return mybatis.selectList("BoardMapper.getBoardList_T", vo);
+        } else if (vo.getSearchCondition().equals("CONTENT")) {
+            return mybatis.selectList("BoardMapper.getBoardList_C", vo);
+        } else {
+            return null;
+        }
     }
 }
