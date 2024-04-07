@@ -16,7 +16,7 @@
         <property name="password"           value=""> </property>
     </bean>
 
-    <!-- SqlSessionFactorBbean    -->
+    <!-- SqlSessionFactorBean    -->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation" value="classpath:sql-map-config.xml"></property>
         <property name="dataSource" ref="dataSource"></property>

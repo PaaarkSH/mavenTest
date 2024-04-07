@@ -1,9 +1,14 @@
 package com.biz.board;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 // 실질적인 비즈니스 로직
+@Service("boardService")
 public class BoardServiceImpl implements BoardService {
+    @Autowired
     private BoardDAO dao;
 
     public BoardServiceImpl(BoardDAO dao) {

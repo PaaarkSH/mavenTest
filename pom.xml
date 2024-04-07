@@ -18,10 +18,32 @@
 
     <!-- 스프링 -->
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
-      <version>6.1.5</version>
-    </dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.3.16</version>
+  </dependency>
+
+  <!-- Spring Web -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>5.3.16</version>
+  </dependency>
+
+  <!-- Spring Web MVC -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.3.16</version>
+  </dependency>
+
+  <!-- (Optional) Spring Test for testing -->
+  <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>5.3.16</version>
+    <scope>test</scope>
+  </dependency>
 
     <!-- 스프링에서 제공하는 로그 출력용   -->
     <dependency>

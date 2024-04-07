@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c39841a9-9099-4992-abc6-826e81b39898" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/business-layer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biz/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biz/board/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biz/board/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biz/board/BoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/business-layer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/business-layer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql-map-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql-map-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <workItem from="1712066419492" duration="3956000" />
       <workItem from="1712151202834" duration="2660000" />
       <workItem from="1712238974127" duration="2338000" />
-      <workItem from="1712499214824" duration="1915000" />
+      <workItem from="1712499214824" duration="2522000" />
     </task>
     <servers />
   </component>
