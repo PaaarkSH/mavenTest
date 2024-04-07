@@ -43,6 +43,9 @@
         <if test="searchCondition == 'CONTENT'">
             and content like '%'||#{searchKeyword}||'%'
         </if>
+        <if test="searchCondition == 'WRITER'">
+            and writer like '%'||#{searchKeyword}||'%'
+        </if>
         order by seq
     </select>
 </mapper>
