@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// 실질적인 비즈니스 로직
+// service 구현 클래스: 실질적인 비즈니스 로직
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
     @Autowired
