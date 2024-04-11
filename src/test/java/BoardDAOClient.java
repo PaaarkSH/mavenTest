@@ -6,8 +6,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.List;
 
-public class
-BoardDAOClient {
+public class BoardDAOClient {
     public static void main(String[] args) {
         // 스프링 컨테이너 구동
         GenericXmlApplicationContext container = new GenericXmlApplicationContext("business-layer.xml");

@@ -3,22 +3,12 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.biz.board.BoardVO" alias="board"/>
+        <typeAlias type="com.biz.board.UserVO" alias="user"/>
     </typeAliases>
-
-<!--    <environments default="development">-->
-<!--        <environment id="development">-->
-<!--            <transactionManager type="JDBC"/>-->
-<!--            <dataSource type="POOLED">-->
-<!--                <property name="driver" value="org.h2.Driver"/>-->
-<!--                <property name="url" value="jdbc:h2:tcl://localhost/~/test"/>-->
-<!--                <property name="username" value="sa"/>-->
-<!--                <property name="password" value=""/>-->
-<!--            </dataSource>-->
-<!--        </environment>-->
-<!--    </environments>-->
 
     <mappers>
         <mapper resource="mappers/board-mapper.xml"/>
+        <mapper resource="mappers/user-mapper.xml"/>
     </mappers>
 
 </configuration>

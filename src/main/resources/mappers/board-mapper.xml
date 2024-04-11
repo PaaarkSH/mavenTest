@@ -3,8 +3,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="BoardMapper">
     <resultMap id="boardResult" type="board">
-        <id property="" column=""/>
-        <result property="seq"      column="SEQ CNT"/>
+        <id     property="seq"        column="SEQ"/>
+        <result property="title"      column="TITLE"/>
+        <result property="writer"     column="WRITER"/>
+        <result property="content"    column="CONTENT"/>
+        <result property="regDate"    column="REGDATE"/>
+        <result property="cnt"        column="CNT"/>
     </resultMap>
     
     <insert id="insertBoard">
